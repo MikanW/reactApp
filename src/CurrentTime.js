@@ -1,5 +1,5 @@
-const CurrentTime = () => {
-    return <h1>21:00</h1>;
+const CurrentTime = (props) => {
+    return <h1>{props.time}</h1>;
 };
 
 export default CurrentTime;
