@@ -3,6 +3,7 @@ import './App.css';
 import CurrentTime from './CurrentTime.js';
 import Greeting from './Greeting.js';
 import moment from 'moment';
+import TextInput from './TextInput.jsx'
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+          <TextInput/>
           <CurrentTime
             time = {curTime.format('HH:mm:ss')}
           />
