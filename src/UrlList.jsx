@@ -1,9 +1,3 @@
-import {Link,
-        BrowserRouter as Router,
-        Route,
-        Routes
-} from 'react-router-dom';
-
 const cookBookList = [  {'name':'红薯玉米挞',
                          'url':'%PUBLIC_URL%/cookBook/swtPttCrnTrt.html'
                     }];
