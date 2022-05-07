@@ -3,7 +3,8 @@ import './App.css';
 import CurrentTime from './CurrentTime.js';
 import Greeting from './Greeting.js';
 import moment from 'moment';
-import TextInput from './TextInput.jsx'
+import UrlList from './UrlList.jsx';
+//import TextInput from './TextInput.jsx'
 
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
 
     setInterval( () => {
       setCurTime(moment());
-    }, 1000);
+    },1000);
 
     return () => {
       clearInterval();
@@ -23,13 +24,17 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <TextInput/>
-          <CurrentTime
-            time = {curTime.format('HH:mm:ss')}
-          />
-          <Greeting
-            userName={'Mikan'}
-          />
+          <div className="appBody">
+            <Greeting
+              userName={'Mikan'}
+            />
+            
+            <CurrentTime
+              date = {curTime.format('YYYY.MM.DD')}
+              time = {curTime.format('HH:mm')}
+            />
+          </div>
+          
       </header>
     </div>
   );
